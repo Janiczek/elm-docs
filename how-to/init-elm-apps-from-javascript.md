@@ -65,4 +65,4 @@ Those will thankfully share common code!
 
 Depending on how you define the `main` value in your Elm app, the `init` function in JavaScript will need different arguments.
 
-**TODO**
+:soon: :soon: :soon:
