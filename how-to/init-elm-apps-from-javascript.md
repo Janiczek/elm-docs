@@ -6,11 +6,11 @@
 
 | Terms of Contents                               |
 | ----------------------------------------------- |
-| [#basic-example](Basic example)                 |
-| [#multiple-entrypoints](Multiple entrypoints)   |
-| [#arguments](Arguments)                         |
-| [#return-value](Return value)                   |
-| [#decoding-flags-in-elm](Decoding flags in Elm) |
+| [Basic example](#basic-example)                 |
+| [Multiple entrypoints](#multiple-entrypoints)   |
+| [Arguments](#arguments)                         |
+| [Return value](#return-value)                   |
+| [Decoding flags in Elm](#decoding-flags-in-elm) |
 
 ----
 
