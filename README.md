@@ -42,15 +42,18 @@ Inspired by [this blogpost](https://www.divio.com/blog/documentation/), this doc
 * [ ] How to add a port to an Elm app
 * [ ] How to use GraphQL with Elm
 * [ ] How to use elm-format
+* [ ] How to use arbitrary values as `Dict` / `Set` keys
 
 ### Explanations
 
 * [ ] If null is missing, what to do instead?
+* [ ] If I can't do side effects, how can I get anything done?
 * [ ] Why are JSON decoders the way they are?
 * [ ] Why is the JavaScript interop the way it is?
 * [ ] What is The Elm Architecture?
 * [ ] Why doesn't Elm have typeclasses?
 * [ ] Why is a type sometimes `Msg` and sometimes `msg`?
+* [ ] What to do with `Json.Decode.Value`?
 
 ### Reference
 
