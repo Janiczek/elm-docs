@@ -63,6 +63,16 @@ Those will thankfully share common code!
 
 ## Arguments
 
-Depending on how you define the `main` value in your Elm app, the `init` function in JavaScript will need different arguments.
+Depending on how you define the `main` value in your Elm app, the `init` function in JavaScript will require different arguments:
 
-:soon: :soon: :soon:
+| `main` value                                                                                          | `node`             | `flags`            |
+| ----------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| [`Html msg`](https://package.elm-lang.org/packages/elm/html/latest/Html#Html)                         | :heavy_check_mark: |                    |
+| [`Platform.worker`](https://package.elm-lang.org/packages/elm/core/latest/Platform#worker)            |                    | :heavy_check_mark: |
+| [`Browser.sandbox`](https://package.elm-lang.org/packages/elm/browser/latest/Browser#sandbox)         | :heavy_check_mark: |                    |
+| [`Browser.element`](https://package.elm-lang.org/packages/elm/browser/latest/Browser#element)         | :heavy_check_mark: | :heavy_check_mark: |
+| [`Browser.document`](https://package.elm-lang.org/packages/elm/browser/latest/Browser#document)       |                    | :heavy_check_mark: |
+| [`Browser.application`](https://package.elm-lang.org/packages/elm/browser/latest/Browser#application) |                    | :heavy_check_mark: |
+
+* The `node` argument needs to be a HTML element, such as one obtained with `document.getElementById('id-of-your-div')`.
+* The `flags` argument is up to you: whatever you put here, your Elm app receives as [`Json.Encode.Value`](https://package.elm-lang.org/packages/elm/json/latest/Json-Encode#Value) which you can then decode.

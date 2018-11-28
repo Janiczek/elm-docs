@@ -23,7 +23,7 @@ Inspired by [this blogpost](https://www.divio.com/blog/documentation/), this doc
 
 ### How-To
 
-* [ ] :soon: [How to init Elm apps from JavaScript](https://github.com/Janiczek/elm-docs/tree/master/how-to/init-elm-apps-from-javascript.md)
+* [x] [How to init Elm apps from JavaScript](https://github.com/Janiczek/elm-docs/tree/master/how-to/init-elm-apps-from-javascript.md)
 * [ ] How to use CSS with Elm
 * [ ] How to send HTTP requests
 * [ ] How to write unit tests
