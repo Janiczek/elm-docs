@@ -87,7 +87,7 @@ Depending on how you define the `main` value in your Elm app, the `init` functio
 | [`Browser.application`](https://package.elm-lang.org/packages/elm/browser/latest/Browser#application) |                    | :heavy_check_mark: |
 
 * The `node` argument needs to be a HTML element, such as one obtained with `document.getElementById('id-of-your-div')`.
-* The `flags` argument is up to you: whatever you put here, your Elm app receives as [`Json.Encode.Value`](https://package.elm-lang.org/packages/elm/json/latest/Json-Encode#Value) which you can then decode.
+* The `flags` argument is up to you: whatever you put here, your Elm app receives as [`Json.Decode.Value`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#Value) which you can then decode.
 
 ## Return value
 
@@ -110,8 +110,8 @@ Usual port rules apply to flags: only certain types are allowed.
 | `()`                | whatever!         | `()`                     |
 | tuples              | `[true, "hello"]` | `(True, "hello")`        |
 | records             | `{foo: "bar"}`    | `{ foo = "bar" }`        |
-| [`Json.Decode.Value`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#Value) | whatever! | `Json.Decode.Value` |
+| [`Json.Decode.Value`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#Value) | whatever! | [`Json.Decode.Value`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#Value) |
 
 Your flags type is the first parameter of the [`Program` type](https://package.elm-lang.org/packages/elm/core/latest/Platform#Program).
 
-If your Elm type and JS value doesn't match (say, you send `42` as a flag to a `String`-expecting program), the app doesn't initialize and instead throws a JavaScript exception. For this reason, people sometimes declare their flags type as `Json.Decode.Value`, which accepts any value, and decode it themselves with JSON decoders using [`Json.Decode.decodeValue`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#decodeValue). That way, the app always initializes and they can recover from any decoding error by dealing with the Result returned by `decodeValue`.
+If your Elm type and JS value doesn't match (say, you send `42` as a flag to a `String`-expecting program), the app doesn't initialize and instead throws a JavaScript exception. For this reason, people sometimes declare their flags type as [`Json.Decode.Value`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#Value), which accepts any value, and decode it themselves with JSON decoders using [`Json.Decode.decodeValue`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#decodeValue). That way, the app always initializes and they can recover from any decoding error by dealing with the Result returned by [`decodeValue`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#decodeValue).
